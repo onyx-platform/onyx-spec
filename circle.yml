@@ -1,0 +1,20 @@
+machine:
+  services:
+    - docker
+  java:
+    version: oraclejdk8
+
+test:
+  override:
+    - lein test:
+        timeout: 640
+
+machine:
+  java:
+    version: oraclejdk8
+
+deployment:
+  update-projects:
+    branch: master
+    commands:
+      - lein deploy
