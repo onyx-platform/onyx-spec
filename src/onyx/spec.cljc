@@ -1,7 +1,6 @@
 (ns onyx.spec
   (:require #?(:clj [clojure.spec.alpha :as s]
-               :cljs [cljs.spec.alpha :as s :refer-macros [coll-of]])
-            #?(:clj [clojure.future :refer [any? boolean? uuid? pos-int?]])))
+               :cljs [cljs.spec.alpha :as s :refer-macros [coll-of]])))
 
 (defn atom? [x]
   (instance? clojure.lang.Atom x))
