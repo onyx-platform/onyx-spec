@@ -719,26 +719,6 @@
   (s/keys :req-un [:onyx.trigger-state.timer/fire-time
                    :onyx.trigger-state.timer/fire?]))
 
-(s/fdef r/discarding-create-state-update
-        :args (s/cat :trigger :job/trigger
-                     :state any?
-                     :state-event :onyx.core/state-event))
-
-(s/fdef r/discarding-apply-state-update
-        :args (s/cat :trigger :job/trigger
-                     :state any?
-                     :entry any?))
-
-(s/fdef r/accumulating-create-state-update
-        :args (s/cat :trigger :job/trigger
-                     :state any?
-                     :state-event :onyx.core/state-event))
-
-(s/fdef r/accumulating-apply-state-update
-        :args (s/cat :trigger :job/trigger
-                     :state any?
-                     :entry any?))
-
 (s/fdef t/next-fire-time
         :args (s/cat :trigger :job/trigger))
 
