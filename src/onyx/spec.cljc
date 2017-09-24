@@ -290,7 +290,7 @@
   [_]
   (s/keys :req [:trigger/window-id :trigger/on
                 :trigger/threshold :trigger/sync]
-          :opt [:trigger/fire-all-extents? :trigger/doc :trigger/pre-evictor 
+          :opt [:trigger/fire-all-extents? :trigger/doc :trigger/pre-evictor
                 :trigger/post-evictor :trigger/refinement :trigger/materialize]))
 
 (defmethod trigger-on :onyx.triggers/punctuation
@@ -719,87 +719,87 @@
   (s/keys :req-un [:onyx.trigger-state.timer/fire-time
                    :onyx.trigger-state.timer/fire?]))
 
-(s/fdef r/discarding-create-state-update
-        :args (s/cat :trigger :job/trigger
-                     :state any?
-                     :state-event :onyx.core/state-event))
+;; (s/fdef r/discarding-create-state-update
+;;         :args (s/cat :trigger :job/trigger
+;;                      :state any?
+;;                      :state-event :onyx.core/state-event))
 
-(s/fdef r/discarding-apply-state-update
-        :args (s/cat :trigger :job/trigger
-                     :state any?
-                     :entry any?))
+;; (s/fdef r/discarding-apply-state-update
+;;         :args (s/cat :trigger :job/trigger
+;;                      :state any?
+;;                      :entry any?))
 
-(s/fdef r/accumulating-create-state-update
-        :args (s/cat :trigger :job/trigger
-                     :state any?
-                     :state-event :onyx.core/state-event))
+;; (s/fdef r/accumulating-create-state-update
+;;         :args (s/cat :trigger :job/trigger
+;;                      :state any?
+;;                      :state-event :onyx.core/state-event))
 
-(s/fdef r/accumulating-apply-state-update
-        :args (s/cat :trigger :job/trigger
-                     :state any?
-                     :entry any?))
+;; (s/fdef r/accumulating-apply-state-update
+;;         :args (s/cat :trigger :job/trigger
+;;                      :state any?
+;;                      :entry any?))
 
-(s/fdef t/next-fire-time
-        :args (s/cat :trigger :job/trigger))
+;; (s/fdef t/next-fire-time
+;;         :args (s/cat :trigger :job/trigger))
 
-(s/fdef t/timer-init-state
-        :args (s/cat :trigger :job/trigger))
+;; (s/fdef t/timer-init-state
+;;         :args (s/cat :trigger :job/trigger))
 
-(s/fdef t/punctuation-init-state
-        :args (s/cat :trigger :job/trigger))
+;; (s/fdef t/punctuation-init-state
+;;         :args (s/cat :trigger :job/trigger))
 
-(s/fdef t/watermark-init-state
-        :args (s/cat :trigger :job/trigger))
+;; (s/fdef t/watermark-init-state
+;;         :args (s/cat :trigger :job/trigger))
 
-(s/fdef t/percentile-watermark-init-state
-        :args (s/cat :trigger :job/trigger))
+;; (s/fdef t/percentile-watermark-init-state
+;;         :args (s/cat :trigger :job/trigger))
 
-(s/fdef t/segment-next-state
-        :args (s/cat :trigger :job/trigger
-                     :state integer?
-                     :state-event :onyx.core/state-event))
+;; (s/fdef t/segment-next-state
+;;         :args (s/cat :trigger :job/trigger
+;;                      :state integer?
+;;                      :state-event :onyx.core/state-event))
 
-(s/fdef t/timer-next-state
-        :args (s/cat :trigger :job/trigger
-                     :state :onyx.trigger-state/timer
-                     :state-event :onyx.core/state-event))
+;; (s/fdef t/timer-next-state
+;;         :args (s/cat :trigger :job/trigger
+;;                      :state :onyx.trigger-state/timer
+;;                      :state-event :onyx.core/state-event))
 
-(s/fdef t/punctuation-next-state
-        :args (s/cat :trigger :job/trigger
-                     :state map?
-                     :state-event :onyx.core/state-event))
+;; (s/fdef t/punctuation-next-state
+;;         :args (s/cat :trigger :job/trigger
+;;                      :state map?
+;;                      :state-event :onyx.core/state-event))
 
-(s/fdef t/watermark-next-state
-        :args (s/cat :trigger :job/trigger
-                     :state any?
-                     :state-event :onyx.core/state-event))
+;; (s/fdef t/watermark-next-state
+;;         :args (s/cat :trigger :job/trigger
+;;                      :state any?
+;;                      :state-event :onyx.core/state-event))
 
-(s/fdef t/percentile-watermark-next-state
-        :args (s/cat :trigger :job/trigger
-                     :state any?
-                     :state-event :onyx.core/state-event))
+;; (s/fdef t/percentile-watermark-next-state
+;;         :args (s/cat :trigger :job/trigger
+;;                      :state any?
+;;                      :state-event :onyx.core/state-event))
 
-(s/fdef t/segment-fire?
-        :args (s/cat :trigger :job/trigger
-                     :trigger-state integer?
-                     :state-event :onyx.core/state-event))
+;; (s/fdef t/segment-fire?
+;;         :args (s/cat :trigger :job/trigger
+;;                      :trigger-state integer?
+;;                      :state-event :onyx.core/state-event))
 
-(s/fdef t/timer-fire?
-        :args (s/cat :trigger :job/trigger
-                     :trigger-state :onyx.trigger-state/timer
-                     :state-event :onyx.core/state-event))
+;; (s/fdef t/timer-fire?
+;;         :args (s/cat :trigger :job/trigger
+;;                      :trigger-state :onyx.trigger-state/timer
+;;                      :state-event :onyx.core/state-event))
 
-(s/fdef t/punctuation-fire?
-        :args (s/cat :trigger :job/trigger
-                     :trigger-state any?
-                     :state-event :onyx.core/state-event))
+;; (s/fdef t/punctuation-fire?
+;;         :args (s/cat :trigger :job/trigger
+;;                      :trigger-state any?
+;;                      :state-event :onyx.core/state-event))
 
-(s/fdef t/watermark-fire?
-        :args (s/cat :trigger :job/trigger
-                     :trigger-state any?
-                     :state-event :onyx.core/state-event))
+;; (s/fdef t/watermark-fire?
+;;         :args (s/cat :trigger :job/trigger
+;;                      :trigger-state any?
+;;                      :state-event :onyx.core/state-event))
 
-(s/fdef t/percentile-watermark-fire?
-        :args (s/cat :trigger :job/trigger
-                     :trigger-state any?
-                     :state-event :onyx.core/state-event))
+;; (s/fdef t/percentile-watermark-fire?
+;;         :args (s/cat :trigger :job/trigger
+;;                      :trigger-state any?
+;;                      :state-event :onyx.core/state-event))
