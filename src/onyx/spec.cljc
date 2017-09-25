@@ -1,5 +1,6 @@
 (ns onyx.spec
-  (:require #?(:clj [clojure.spec.alpha :as s]
+  (:require [onyx.triggers :as t]
+            #?(:clj [clojure.spec.alpha :as s]
                :cljs [cljs.spec.alpha :as s :refer-macros [coll-of]])))
 
 (defn atom? [x]
