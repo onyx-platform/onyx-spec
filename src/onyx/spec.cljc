@@ -282,6 +282,11 @@
 
 (defmulti trigger-on :trigger/on)
 
+(def evictor? #{[:all] [:none]})
+
+(s/def :trigger/pre-evictor evictor?)
+(s/def :trigger/post-evictor evictor?)
+
 (defmethod trigger-on :onyx.triggers/timer
   [_]
   (s/keys :req [:trigger/window-id :trigger/on :trigger/period :trigger/sync]
