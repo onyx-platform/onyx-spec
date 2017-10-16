@@ -12,7 +12,7 @@
                              :password :env
                              :sign-releases false}}
   :dependencies [[org.clojure/clojure "1.9.0-alpha20"]
-                 [org.onyxplatform/onyx "0.11.1-20171016_181013-gab48b62"]]
+                 [org.onyxplatform/onyx "0.11.1-alpha2"]]
   :plugins [[codox "0.8.8"]
             [lein-set-version "0.4.1"]
             [lein-update-dependency "0.1.2"]
