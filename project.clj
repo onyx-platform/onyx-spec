@@ -1,4 +1,4 @@
-(defproject org.onyxplatform/onyx-spec "0.12.6.1-SNAPSHOT"
+(defproject org.onyxplatform/onyx-spec "0.12.7.0"
   :description "Clojure specs for Onyx core."
   :url "https://github.com/onyx-platform/onyx-spec"
   :license {:name "Eclipse Public License"
@@ -12,7 +12,7 @@
                              :password :env
                              :sign-releases false}}
   :dependencies [[org.clojure/clojure "1.9.0-alpha20"]
-                 [org.onyxplatform/onyx "0.12.6"]]
+                 [org.onyxplatform/onyx "0.12.7"]]
   :plugins [[codox "0.8.8"]
             [lein-set-version "0.4.1"]
             [lein-update-dependency "0.1.2"]
