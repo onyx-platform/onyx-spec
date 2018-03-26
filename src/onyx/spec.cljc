@@ -736,12 +736,6 @@
 (s/fdef t/punctuation-init-state
         :args (s/cat :trigger :job/trigger))
 
-(s/fdef t/watermark-init-state
-        :args (s/cat :trigger :job/trigger))
-
-(s/fdef t/percentile-watermark-init-state
-        :args (s/cat :trigger :job/trigger))
-
 (s/fdef t/segment-next-state
         :args (s/cat :trigger :job/trigger
                      :state integer?
