@@ -13,7 +13,8 @@
                              :sign-releases false}}
   :dependencies [[org.clojure/clojure "1.9.0-alpha20"]
                  [org.clojure/clojurescript "1.10.238"]
-                 [org.onyxplatform/onyx "0.12.7"]]
+                 [org.onyxplatform/onyx "0.12.7"]
+                 [org.clojure/test.check "0.9.0"]]
   :clean-targets ^{:protect false} [:target-path :compile-path "resources/public/js"]
   :doo {:build "test"
         :alias {:default [:chrome-headless]}}
@@ -24,7 +25,7 @@
                            :output-dir "resources/public/js/compiled_test/out"
                            :main onyx.spec.test-runner
                            :optimizations :none}}]}
- >>>>>>> tests
+
   :plugins [[codox "0.8.8"]
             [lein-set-version "0.4.1"]
             [lein-update-dependency "0.1.2"]
