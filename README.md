@@ -16,6 +16,20 @@ In your peer boot-up namespace:
 (:require [onyx.spec])
 ```
 
+## Doo
+
+For cljs testing run:
+
+`npm install karma karma-cljs-test karma-chrome-launcher --save-dev`
+
+to get everything setup. Then run:
+
+`lein doo once`
+
+to run the tests.
+
+Note: You need to update `/test/onyx/spec/test_runner.cljs` whenever you rename or add cljs targeted test files.
+
 ## License
 
 Copyright © 2017 Distributed Masonry

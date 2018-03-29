@@ -6,6 +6,8 @@ pom.xml.asc
 *.jar
 *.class
 /.lein-*
+/resources/public/js/
+/node_modules/
 /.nrepl-port
 .hgignore
 .hg/
