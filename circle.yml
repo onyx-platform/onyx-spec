@@ -6,8 +6,12 @@ machine:
 
 test:
   override:
+    - npm install karma karma-cljs-test karma-chrome-launcher --save-dev`
+    - npm install -g karma-cli
     - lein test:
-        timeout: 640
+        timeout: 240
+    - lein doo once:
+        timeout: 240
 
 machine:
   java:

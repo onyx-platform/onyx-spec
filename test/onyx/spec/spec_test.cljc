@@ -14,20 +14,3 @@
 (deftest test-triggers
   (do
     (s/exercise-fn `onyx.triggers/next-fire-time)))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
