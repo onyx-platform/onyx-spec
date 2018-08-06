@@ -1,4 +1,4 @@
-(defproject org.onyxplatform/onyx-spec "0.13.0.1-SNAPSHOT"
+(defproject org.onyxplatform/onyx-spec "0.13.3.0-alpha4"
   :description "Clojure specs for Onyx core."
   :url "https://github.com/onyx-platform/onyx-spec"
   :license {:name "Eclipse Public License"
@@ -13,7 +13,7 @@
                              :sign-releases false}}
   :dependencies [[org.clojure/clojure "1.9.0-alpha20"]
                  [org.clojure/clojurescript "1.10.238"]
-                 [org.onyxplatform/onyx "0.13.0"]
+                 [org.onyxplatform/onyx "0.13.3-alpha4"]
                  [org.clojure/test.check "0.9.0"]]
   :clean-targets ^{:protect false} [:target-path :compile-path "resources/public/js"]
   :doo {:build "test"
