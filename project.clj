@@ -1,4 +1,4 @@
-(defproject org.onyxplatform/onyx-spec "0.14.1.0"
+(defproject org.onyxplatform/onyx-spec "0.14.1.1-SNAPSHOT"
   :description "Clojure specs for Onyx core."
   :url "https://github.com/onyx-platform/onyx-spec"
   :license {:name "Eclipse Public License"
