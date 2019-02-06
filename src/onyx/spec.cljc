@@ -4,7 +4,9 @@
                :cljs [cljs.spec.alpha :as s :refer-macros [coll-of]])))
 
 (defn atom? [x]
-  (instance? clojure.lang.Atom x))
+  (instance? #?(:clj clojure.lang.IAtom
+                :cljs Atom) x))
+
 
 (defn namespaced-keyword? [x]
   (and (keyword? x) (namespace x)))
