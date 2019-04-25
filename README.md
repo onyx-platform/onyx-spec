@@ -7,7 +7,7 @@ Clojure specs for Onyx core.
 In your project file:
 
 ```clojure
-[org.onyxplatform/onyx-spec "0.14.1.1"]
+[org.onyxplatform/onyx-spec "0.14.1.2-SNAPSHOT"]
 ```
 
 In your peer boot-up namespace:
